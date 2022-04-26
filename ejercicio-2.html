@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JavaScript</title>
+		<link rel="icon" href="images/favicon.png" type="image/x-icon">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script src="js/jquery-3.2.1.slim.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</head>
+	<body class="bg-danger">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="collapse navbar-collapse d-flex justify-content-between" id="navbarCollapse">
+				<div>
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item mx-5"><a class="nav-link" href="ejercicio-1.html">Ejercicio 1</a></li>
+						<li class="nav-item mx-5"><a class="nav-link text-danger" href="ejercicio-2.html">Ejercicio 2</a></li>
+						<li class="nav-item mx-5"><a class="nav-link" href="ejercicio-3.html">Ejercicio 3</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="container mt-5">
+			<div class="row">
+
+				<div class="col-4 offset-4 text-center">
+
+					<h1 id="mensaje" class="bg-danger p-3 text-warning text-center">Estoy aprobado</h1>
+					
+					<a id="enlace" href="aprobado.html"><img id="emoji" src="images/aprobado.png" class="w-100" onmouseenter="cambiarImagen()" onmouseleave="cambiarImagen2()"></a>
+
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+
+		//Function to change the image, text and URL when the mouse is over it
+		function cambiarImagen(){
+			document.getElementById("emoji").src="images/suspendido.png";
+			document.getElementById("mensaje").innerHTML="Estoy suspendido";
+			document.getElementById("enlace").href="suspendido.html";
+		}
+		function cambiarImagen2(){
+			document.getElementById("emoji").src="images/aprobado.png";
+			document.getElementById("mensaje").innerHTML="Estoy aprobado";
+			document.getElementById("enlace").href="aprobado.html";
+		}	
+
+	</script>
+</html>

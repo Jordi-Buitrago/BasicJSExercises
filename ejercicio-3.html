@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JavaScript</title>
+		<link rel="icon" href="images/favicon.png" type="image/x-icon">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script src="js/jquery-3.2.1.slim.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</head>
+	<body class="bg-primary">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="collapse navbar-collapse d-flex justify-content-between" id="navbarCollapse">
+				<div>
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item mx-5"><a class="nav-link" href="ejercicio-1.html">Ejercicio 1</a></li>
+						<li class="nav-item mx-5"><a class="nav-link" href="ejercicio-2.html">Ejercicio 2</a></li>
+						<li class="nav-item mx-5"><a class="nav-link text-primary" href="ejercicio-3.html">Ejercicio 3</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="container mt-5">
+			<div class="row">
+
+				<div class="col-4 offset-4">
+					
+					<form id="formulario" name="formulario">
+						
+						<div class="form-group" id="form-group-usuario">
+							<input type="color" class="form-control form-control-lg text-primary mx-auto my-3" style="height: 50px;"  id="color" name="color">
+						</div>
+						
+						<div class="form-group mx-auto text-right">
+							<button type="button" class="btn btn-lg btn-warning mb-3" id="anadir" name="anadir" onclick="añadirBloque()">Añadir bloque</button>
+						</div>
+					
+					</form>
+
+				</div>
+			</div>
+
+			<div class="row" id="bloques">
+
+				<div class="col-2" style="background-color: white; height: 150px;"></div>
+
+			</div>
+		</div>
+	</body>
+
+	<script>
+		
+		//Function to add a block with the color selected
+		function añadirBloque(){
+			let bloque = document.createElement("div");
+			bloque.className = "col-2";
+			bloque.style.backgroundColor = document.getElementById("color").value;
+			bloque.style.height = "150px";
+			document.getElementById("bloques").appendChild(bloque);
+		}
+	</script>
+</html>
