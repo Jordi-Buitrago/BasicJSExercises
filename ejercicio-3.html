@@ -8,6 +8,7 @@
 		<script src="js/jquery-3.2.1.slim.min.js"></script>
 		<script src="js/popper.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		<script src="js/main.js"></script>
 	</head>
 	<body class="bg-primary">
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -48,16 +49,4 @@
 			</div>
 		</div>
 	</body>
-
-	<script>
-		
-		//Function to add a block with the color selected
-		function añadirBloque(){
-			let bloque = document.createElement("div");
-			bloque.className = "col-2";
-			bloque.style.backgroundColor = document.getElementById("color").value;
-			bloque.style.height = "150px";
-			document.getElementById("bloques").appendChild(bloque);
-		}
-	</script>
 </html>
